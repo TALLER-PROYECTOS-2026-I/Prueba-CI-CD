@@ -20,26 +20,43 @@ export default function TabLayout() {
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
             position: 'absolute',
           },
           default: {},
         }),
       }}>
+
       <Tabs.Screen
         name="index"
         options={{
           title: 'Competencias',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="list.bullet.clipboard.fill" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="list.bullet.clipboard.fill" color={color} />
+          ),
         }}
       />
+
       <Tabs.Screen
         name="explore"
         options={{
           title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="paperplane.fill" color={color} />
+          ),
         }}
       />
+
+      {/* 👇 TU NUEVA PANTALLA */}
+      <Tabs.Screen
+        name="correos"
+        options={{
+          title: 'Correos',
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="envelope.fill" color={color} />
+          ),
+        }}
+      />
+
     </Tabs>
   );
 }
