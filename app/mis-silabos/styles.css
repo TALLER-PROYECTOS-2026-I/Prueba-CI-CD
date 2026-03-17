@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f5f6f8;
+}
+
+.container {
+  display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: #ffffff;
+  height: 100vh;
+  padding: 20px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.sidebar h3 {
+  background: #eaeaea;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar li {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  background: #f0f0f0;
+}
+
+.active {
+  border-left: 4px solid black;
+  font-weight: bold;
+}
+
+/* CONTENIDO */
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* BOTÓN + */
+.btn-new {
+  background: black;
+  color: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+/* CARDS */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e5e5e5;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #777;
+  border-radius: 50%;
+}
+
+/* ESTADOS */
+.estado {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.pendiente { background: #f4b400; }
+.aprobado { background: #0f9d58; }
+.rechazado { background: #db4437; }
+
+/* ACCIONES */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 350px;
+  margin: 10% auto;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+}
