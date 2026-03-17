@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mis Sílabos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h3>Logo USMP</h3>
+    <ul>
+      <li class="active">Inicio</li>
+      <li>Asignaciones</li>
+      <li>Mensajería</li>
+    </ul>
+  </div>
+
+  <!-- Contenido -->
+  <div class="content">
+    
+    <div class="header">
+      <h1>Mis Sílabos</h1>
+
+      <div class="header-right">
+        <input type="text" id="busqueda" placeholder="Buscar sílabo...">
+        <button onclick="nuevoSilabo()" class="btn-new">＋</button>
+      </div>
+    </div>
+
+    <div id="lista"></div>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal()">✖</span>
+    <h2 id="modalTitulo"></h2>
+    <p id="modalEstado"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
